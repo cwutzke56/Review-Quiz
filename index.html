@@ -30,7 +30,18 @@
                     Try to answer the questions within the time limit, there is a ten second penality for each incorrect answer!
                 </p>
             </div>
-          
-
+            <div class = "hide" id = "questions">
+                <h2 id ="questionText"></h2>
+                <div class ="options" id="options"></div>
+            </div>
+            <div class = "hide" id="endQuestion">
+            <h2>Finish</h2>
+            <p>Your score is: <span id="finalScore"></span></p>
+            <p>Please input your name: <input type="text" id="name">
+            <button id="submitTest">Submit</button>
+            </p>
+            </div>
+            <div id="feedback" class="feedback hide"></div>
         </main>
+        <script src="./assets/js/script.js"></script>
     </body>
