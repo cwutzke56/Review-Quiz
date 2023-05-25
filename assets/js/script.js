@@ -1,6 +1,12 @@
 //declaring my DOM elements
 var timerEL = document.querySelector("#timer");
-
+var questionsEL = document.querySelector("#questions");
+var choicesEl = document.querySelector("#options");
+var submitBtn = document.querySelector("#finalscore");
+var startBtn = document.querySelector("#start");
+var nameEl = document.querySelector("#name");
+var feedbackEl = document.querySelector("#feedback");
+var reStartBtn = document.querySelector("#restart");
 //questions being asked for quiz
 var questions = [
     { prompt: "Inside which HTML element do we put the JavaScript?",
@@ -31,13 +37,27 @@ var questions = [
     options: ["method", "assignment operator", "variable", "string"],
     answer: "variable"
 }];
-//
+
+//declaration of used variables throughout
+var time= questions.length*15;
+var timer;
+var questionCurrent;
+
+//clicking timer
 function timerStart(){
-
-}
-//
+    time--;
+    timerEl.textContent = time;
+    if (time <= 0) {
+      endQuestion();
+}}
+//starts the test 
 function startQuestion(){
-
+    timerId = setInterval(clockTick, 1000);
+    timerEl.textContent = time;
+    var nextScreenEl = document.getElementById("start-screen");
+    nextScreenEl.setAttribute("class", "hide");
+    questionsEl.removeAttribute("class");
+    getQuestion();
 }
 //
 function questionClick(){
