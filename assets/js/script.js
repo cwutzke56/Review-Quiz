@@ -1,12 +1,12 @@
 //declaring my DOM elements
 var timerEl = document.querySelector("#timer");
-var questionsEl = document.querySelector("#questions");
+var questionsEl = document.querySelector("#start");
 var choicesEl = document.querySelector("#options");
 var submitBtn = document.querySelector("#submitTest");
 var startBtn = document.querySelector("#start");
 var nameEl = document.querySelector("#name");
 var feedbackEl = document.querySelector("#feedback");
-var reStartBtn = document.querySelector("#restart");
+var reStartBtn = document.querySelector("#clear");
 
 
 //declaration of used variables throughout
@@ -37,7 +37,7 @@ function startQuestions(){
 }
 startBtn.addEventListener("click", startQuestions);
 
-//questions being asked for quiz
+//questions being asked for quiz in object
 var questions = [
 
 ];

@@ -77,9 +77,6 @@ ol {
     list-style: decimal inside none;
 }
   
-  li:nth-child(odd) {
-    background-color: #dfdae7;
-}
 
 /* This will be applied on any screen smaller than 768px */
 @media screen and (max-width: 768px) {
